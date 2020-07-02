@@ -18,5 +18,8 @@ public class Array {
        // ArrayMinMax myArrayMinMax = new ArrayMinMax();
        // myArrayMinMax.arrMax();
        // myArrayMinMax.arrMin();
+
+        CheckArr myCheckArr = new CheckArr();
+        myCheckArr.ifEqual();
     }
 }
