@@ -15,8 +15,8 @@ public class Array {
        // SquareArr mySquareArr = new SquareArr();
        // mySquareArr.diagonalFill(7,7);
 
-        ArrayMinMax myArrayMinMax = new ArrayMinMax();
-        myArrayMinMax.arrMax();
-        myArrayMinMax.arrMin();
+       // ArrayMinMax myArrayMinMax = new ArrayMinMax();
+       // myArrayMinMax.arrMax();
+       // myArrayMinMax.arrMin();
     }
 }
