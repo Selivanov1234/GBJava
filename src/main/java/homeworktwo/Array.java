@@ -15,11 +15,14 @@ public class Array {
        // SquareArr mySquareArr = new SquareArr();
        // mySquareArr.diagonalFill(7,7);
 
-       // ArrayMinMax myArrayMinMax = new ArrayMinMax();
-       // myArrayMinMax.arrMax();
-       // myArrayMinMax.arrMin();
+      // ArrayMinMax myArrayMinMax = new ArrayMinMax();
+      // myArrayMinMax.arrMax();
+      // myArrayMinMax.arrMin();
 
-        CheckArr myCheckArr = new CheckArr();
-        myCheckArr.ifEqual();
+       // CheckArr myCheckArr = new CheckArr();
+       // myCheckArr.ifEqual();
+
+       // ArrShift myArrShift = new ArrShift();
+       // myArrShift.shiftLeft(-1);
     }
 }
