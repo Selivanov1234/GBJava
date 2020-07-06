@@ -1,35 +1,65 @@
-package homeworkthree;
+package main.java.homeworkthree;
 
-import java.util.Random;
 import java.util.Scanner;
 
-/* 1. Написать программу, которая загадывает случайное число от 0 до 9, и пользователю дается 3 попытки угадать это число.
-При каждой попытке компьютер должен сообщить больше ли указанное пользователем число чем загаданное, или меньше.
-После победы или проигрыша выводится запрос – «Повторить игру еще раз? 1 – да / 0 – нет»(1 – повторить, 0 – нет).
-* */
 public class GuessTheNumber {
     public static int secretNumber;
+
     public static void main(String[] args) {
 
-        secretNumber();
+        gameIntro();
+        secNumber();
+        System.out.println(secretNumber);
         enterNumber();
-
-        System.out.println(secretNumber());
+        playAgain();
     }
-    public static int secretNumber () {
-        secretNumber = (int) (10 *  Math.random());
+
+    public static void gameIntro() {
+        System.out.println("\n**********Добро пожаловать в игру Угадай Число!********** \n\nУ Вас есть 3 попытки, чтобы угадать загаданное число от 1 до 9.");
+    }
+
+    public static int secNumber() {
+        secretNumber = (int) (10 * Math.random());
         return (secretNumber);
     }
-    public static int enterNumber () {
+
+    public static void enterNumber() {
+        int maxTries = 3;
+        int currentTry = 1;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите целое число от 1-9.");
-       // int a = sc.nextInt();
-        if (sc.hasNextInt()) {
-            System.out.println("Вы ввели: " + sc.nextInt());
-        } else {
-            System.out.println("Вы ввели неверно число.");
+        for (currentTry = 0; currentTry <= maxTries; currentTry++) {
+            System.out.println("\nПопытка № " + currentTry);
+            System.out.print("\nВведите целое число от 1-9: \n");
+            int a = sc.nextInt();
+            if ((1 <= a) && (a <= 10)) {
+                System.out.println("Вы ввели: " + a);
+            } else {
+                System.out.println("Вы ввели неверно число.");
+            }
+            if (a == secretNumber) {
+                System.out.println("Поздравляем! Вы выграли!");
+                break;
+            } else if (a > secretNumber) {
+                System.out.println("Слишком большое число! Попробуй еще раз!");
+            } else {
+                System.out.println("Слишком маленькое число! Попробуй еще раз");
+            }
         }
-        return sc.nextInt();
     }
-    public static void compare
+    public static void  playAgain () {
+        int answer = 0;
+        System.out.println("Хотите сыграть еще? 1 - да, 2 - нет!");
+        Scanner sc = new Scanner(System.in);
+        answer = sc.nextInt();
+        if (answer == 1) {
+            gameIntro();
+            secNumber();
+            System.out.println(secretNumber);
+            enterNumber();
+            playAgain();
+        } else {
+            System.out.println("Спасибо за игру!");
+        }
+        sc.close();
+    }
 }
