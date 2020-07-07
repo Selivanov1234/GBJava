@@ -1,4 +1,4 @@
-package main.java.homeworkthree;
+package homeworkthree;
 
 import java.util.Scanner;
 
@@ -7,11 +7,16 @@ public class GuessTheNumber {
 
     public static void main(String[] args) {
 
-        gameIntro();
-        secNumber();
-        System.out.println(secretNumber);
-        enterNumber();
-        playAgain();
+        GuessWord myGuessWord = new GuessWord();
+        myGuessWord.randomWord();
+        myGuessWord.askForGuess();
+        myGuessWord.checkAnswer();
+        myGuessWord.lastWords();
+       // gameIntro();
+       // secNumber();
+       // System.out.println(secretNumber);
+       // enterNumber();
+       // playAgain();
     }
 
     public static void gameIntro() {
@@ -29,7 +34,7 @@ public class GuessTheNumber {
         Scanner sc = new Scanner(System.in);
         for (currentTry = 0; currentTry <= maxTries; currentTry++) {
             System.out.println("\nПопытка № " + currentTry);
-            System.out.print("\nВведите целое число от 1-9: \n");
+            System.out.print("\nВведите целое число от 0-9: \n");
             int a = sc.nextInt();
             if ((1 <= a) && (a <= 10)) {
                 System.out.println("Вы ввели: " + a);
