@@ -12,8 +12,8 @@ public class Array {
       // MutiplyArr myMultiplyArr = new MutiplyArr();
       // myMultiplyArr.multiply(6);
 
-       // SquareArr mySquareArr = new SquareArr();
-       // mySquareArr.diagonalFill(7,7);
+        // SquareArr mySquareArr = new SquareArr();
+        // mySquareArr.diagonalFill(5,5);
 
       // ArrayMinMax myArrayMinMax = new ArrayMinMax();
       // myArrayMinMax.arrMax();
