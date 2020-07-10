@@ -131,15 +131,35 @@ public class XOGame {
         return false;
     }
     public static boolean checkWin(char symb) {
-      // if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-      // if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-      // if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-      // if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-      // if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-      // if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
-      // if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-      // if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
+      if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb && map [0][3] == symb) return true;// 1 line
+      if (map[0][1] == symb && map[0][2] == symb && map[0][3] == symb && map [0][4] == symb) return true;// 1 line
+      if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb && map [1][3] == symb) return true;// 2 line
+      if (map[1][1] == symb && map[1][2] == symb && map[1][3] == symb && map [1][4] == symb) return true;// 2 line
+      if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb && map [2][3] == symb) return true;// 3 line
+      if (map[2][1] == symb && map[2][2] == symb && map[2][3] == symb && map [2][4] == symb) return true;// 3 line
+      if (map[3][0] == symb && map[3][1] == symb && map[3][2] == symb && map [3][3] == symb) return true;// 4 line
+      if (map[3][1] == symb && map[3][2] == symb && map[3][3] == symb && map [3][4] == symb) return true;// 4 line
+      if (map[4][1] == symb && map[4][2] == symb && map[4][3] == symb && map [4][4] == symb) return true;// 5 line
+      if (map[4][0] == symb && map[4][1] == symb && map[4][2] == symb && map [4][3] == symb) return true;// 5 line
+      if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb && map [3][0] == symb) return true;// 1 column
+      if (map[1][0] == symb && map[2][0] == symb && map[3][0] == symb && map [4][0] == symb) return true;// 1 column
+      if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb && map [3][1] == symb) return true;// 2 column
+      if (map[1][1] == symb && map[2][1] == symb && map[3][1] == symb && map [4][1] == symb) return true;// 2 column
+      if (map[1][2] == symb && map[2][2] == symb && map[3][2] == symb && map [4][2] == symb) return true;// 3 column
+      if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb && map [3][2] == symb) return true;// 3 column
+      if (map[0][3] == symb && map[1][3] == symb && map[2][3] == symb && map [3][3] == symb) return true;// 4 column
+      if (map[1][3] == symb && map[2][3] == symb && map[3][3] == symb && map [4][3] == symb) return true;// 4 column
+      if (map[0][4] == symb && map[1][4] == symb && map[2][4] == symb && map [3][4] == symb) return true;// 5 column
+      if (map[1][4] == symb && map[2][4] == symb && map[3][4] == symb && map [4][4] == symb) return true;// 5 column
 
+      if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb && map [3][3] == symb) return true;// central diagonal
+      if (map[1][1] == symb && map[2][2] == symb && map[3][3] == symb && map [4][4] == symb) return true;// central diagonal
+      if (map[3][0] == symb && map[2][1] == symb && map[1][2] == symb && map [0][3] == symb) return true;// left diagonal
+      if (map[1][0] == symb && map[2][1] == symb && map[3][2] == symb && map [4][3] == symb) return true;// 2-nd left
+      if (map[4][0] == symb && map[3][1] == symb && map[2][2] == symb && map [1][3] == symb) return true;// central 2-nd diagonal
+      if (map[3][1] == symb && map[2][2] == symb && map[1][3] == symb && map [0][4] == symb) return true;// central 2-nd diagonal
+      if (map[0][1] == symb && map[1][2] == symb && map[2][3] == symb && map [3][4] == symb) return true;// central 2-nd diagonal
+      if (map[4][1] == symb && map[3][2] == symb && map[2][3] == symb && map [1][4] == symb) return true;// central 2-nd diagonal
         return false;
     }
 }
