@@ -1,7 +1,17 @@
 package homeworksix;
 
 public class Animals {
+    double jumpHeight = 0;
+    int runAbility = 0;
+    int swimAbility = 0;
+    String name = this.getClass().getSimpleName();
+    public Animals () {
+    }
+    public void Intro () {
+        System.out.println("The " + name);
+    }
     public void jump (double obstacleHeight, double jumpHeight) {
+
         if (jumpHeight < obstacleHeight) {
             System.out.println("The obstacle is too high!");
         }else {
@@ -17,7 +27,7 @@ public class Animals {
     }
     public void swim (int distance, int swimAbility) {
         if (swimAbility < distance) {
-            System.out.println(" Too long to swim!");
+            System.out.println("Too long to swim!");
         }else {
             System.out.println("Well done! It is on the other side!");
         }

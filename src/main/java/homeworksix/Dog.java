@@ -3,16 +3,27 @@ package homeworksix;
 public class Dog extends Animals {
     @Override
     public void jump(double obstacleHeight, double jumpHeight) {
-        super.jump(obstacleHeight, 0.5);
+       // super.jumpHeight = 0.5;
+        Intro();
+        super.jump(obstacleHeight, jumpHeight);
     }
 
     @Override
     public void run(int distance, int runAbility) {
-        super.run(distance, 500);
+        Intro();
+     //   super.runAbility = 500;
+        super.run(distance, runAbility);
     }
 
     @Override
     public void swim(int distance, int swimAbility) {
-        super.swim(distance, 10);
+        Intro();
+      //  super.swimAbility = 10;
+        super.swim(distance, swimAbility);
+    }
+
+    @Override
+    public void Intro() {
+        super.Intro();
     }
 }
